@@ -1,0 +1,12 @@
+extends ../layout 
+
+block main-content 
+    h1 List of the skills
+    button.add-new
+        a(href="/admin/skills/add") Add New
+    ul#list 
+        each skill in skills
+            li 
+                a(href=`/admin/skills/skill/${skill._id}`) #{skill.name}
+
+

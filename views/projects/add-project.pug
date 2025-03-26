@@ -1,0 +1,62 @@
+extends ../layout 
+
+block main-content 
+    h1 Add a new project 
+    form(method="post", action="/admin/projects/add/submit")
+        div.inputBox 
+            label(for="pname") Project Name
+            input(type="text", id="pname", placeholder="e.g. E-commerce site", name="project_name")
+        div.inputBox 
+            label(for="url") URL
+            input(type="text", id="url", placeholder="e.g. https://www.brusteeapp.com", name="url")
+        div.inputBox 
+            label(for="image-name") Image for Thumbnail 
+            input(type="text", id="image-name", placeholder="e.g. Type the name of the image file", name="thumbnail")
+        div.inputBox 
+            label(for="description") Description
+            textarea(id="description", placeholder="Type your description here....", name="description")
+        div.inputBox#skills-used
+            p Skills used
+            div.check-wrap 
+                input(type="checkbox" name="skills" id="html" value="HTML")
+                label(for="html") HTML
+            div.check-wrap
+                input(type="checkbox" name="skills" id="css" value="CSS")
+                label(for="css") CSS
+            div.check-wrap
+                input(type="checkbox" name="skills" id="javascript" value="JavaScript")
+                label(for="javascript") JavaScript
+            div.check-wrap
+                input(type="checkbox" name="skills" id="bootstrap" value="Bootstrap")
+                label(for="bootstrap") Bootstrap
+            div.check-wrap
+                input(type="checkbox" name="skills" id="tailwind" value="Tailwind CSS")
+                label(for="tailwind") Tailwind
+            div.check-wrap
+                input(type="checkbox" name="skills" id="react" value="React")
+                label(for="react") React
+            div.check-wrap
+                input(type="checkbox" name="skills" id="nodejs" value="Node.js")
+                label(for="nodejs") Node.js
+            div.check-wrap
+                input(type="checkbox" name="skills" id="expressjs" value="Express.js")
+                label(for="expressjs") Express.js
+            div.check-wrap
+                input(type="checkbox" name="skills" id="mongodb" value="mongoDB")
+                label(for="mongodb") MongoDB
+            div.check-wrap
+                input(type="checkbox" name="skills" id="c#" value="C#")
+                label(for="c#") C#
+            div.check-wrap
+                input(type="checkbox" name="skills" id="dotnet" value=".NET")
+                label(for="dotnet") .NET
+            div.check-wrap
+                input(type="checkbox" name="skills" id="php" value="PHP")
+                label(for="php") PHP
+            div.check-wrap
+                input(type="checkbox" name="skills" id="mysql" value="MySQL")
+                label(for="mysql") MySQL 
+            div.check-wrap
+                input(type="checkbox" name="skills" id="laravel" value="Laravel")
+                label(for="laravel") Laravel
+        button(type="submit") Add Project

@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Admin | #{title} 
+        link(rel="stylesheet", href="/styles/main.css")
+        script(src="/scripts/main.js", type="text/javascript")
+    body 
+        section#wrapper 
+            header
+                h2#site-logo 
+                    a(href="/admin") 
+                        img(src="/images/logo.svg", alt="VK. Veerpal Kaur. Web Dev")
+                div#menu-toggle 
+                    img(src="/icons/menu.svg", alt="Open Menu")
+            nav(class="")
+                div#close-btn 
+                    img(src="/icons/close.svg", alt="Close Button")
+                ul#menu 
+                    li 
+                        a(href="/admin/projects") Projects 
+                    li 
+                        a(href="/admin/skills") Skills 
+                    li 
+                        a(href="#") Education 
+                    li 
+                        a(href="#") Experience 
+                    li 
+                        a(href="#") Social Links 
+                
+            section#container 
+                main    
+                    block main-content 
+                include footer.pug

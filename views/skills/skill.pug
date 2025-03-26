@@ -1,0 +1,14 @@
+extends ../layout 
+
+block main-content
+    h1 #{skill.name}
+    div.information 
+        div.info.skill
+            p Category: #{skill.category} 
+            p Proficiency Level: #{skill.proficiency}
+            img(src=`/images/${skill.icon}` alt="skill icon")
+        div.buttons 
+            button 
+                a(href="/admin/skills") Back 
+            button
+                a(href=`/admin/skills/delete/${skill._id}`) Delete

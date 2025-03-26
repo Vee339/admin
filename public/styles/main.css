@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Geologica", sans-serif;
+  position: relative;
+}
+#wrapper {
+  max-width: 1536px;
+  min-height: 100vh;
+}
+header {
+  padding: 0 50px;
+  background: #27391c;
+  border-bottom: 0.3px solid rgba(240, 248, 255, 0.212);
+  width: 100%;
+  height: 91px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header #menu-toggle {
+  display: none;
+}
+header h2 {
+  height: 90px;
+  width: 100px;
+}
+#site-logo a {
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#site-logo a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+nav {
+  width: 250px;
+  background: #27391c;
+  position: fixed;
+  top: 91px;
+  left: 0;
+  height: 100vh;
+}
+nav #close-btn {
+  display: none;
+}
+#menu li {
+  list-style-type: none;
+  border-bottom: 0.3px solid rgba(240, 248, 255, 0.212);
+}
+#menu li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: aliceblue;
+  text-decoration: none;
+  padding: 10px 50px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+#menu li a:hover {
+  background: rgba(240, 248, 255, 0.055);
+}
+#container {
+  position: absolute;
+  top: 91px;
+  left: 250px;
+  width: calc(100% - 250px);
+}
+main {
+  width: 100%;
+  min-height: 80vh;
+  background: #18230f;
+  padding: 30px 80px;
+  color: aliceblue;
+}
+h1 {
+  font-size: 2rem;
+  margin-bottom: 35px;
+}
+button.add-new {
+  display: block;
+  margin: 0 0 0 auto;
+}
+main #list {
+  margin-top: 30px;
+  list-style-type: none;
+}
+main #list li {
+  height: 40px;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.427);
+  margin-bottom: 35px;
+}
+main #list li a {
+  color: aliceblue;
+  text-decoration: none;
+  display: block;
+  font-size: 1.3rem;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 12px;
+  text-transform: capitalize;
+  transition: all 0.2s;
+}
+main #list li a:hover {
+  font-size: 1.6rem;
+}
+.project-details {
+  width: 100%;
+  height: 100%;
+  padding: 40px 0;
+  display: flex;
+  gap: 30px;
+}
+.imgBox {
+  width: 40%;
+  border: 1px solid rgba(240, 248, 255, 0.313);
+  border-radius: 3px;
+}
+.imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.information {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.information p {
+  margin-bottom: 20px;
+}
+.information a {
+  color: rgb(158, 204, 243);
+}
+.information .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.information .buttons button,
+button.add-new {
+  background: transparent;
+  border: 1px solid antiquewhite;
+}
+.information .buttons button a,
+button.add-new a {
+  display: block;
+  padding: 15px 35px;
+  color: antiquewhite;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Geologica", sans-serif;
+  transition: all 0.3s;
+}
+.information .buttons button a:hover,
+button.add-new a:hover {
+  background: rgba(240, 248, 255, 0.055);
+}
+.info.skill img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 40px;
+  width: 50%;
+}
+.inputBox {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.inputBox input {
+  padding: 10px 5px;
+  background: transparent;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  outline: none;
+}
+.inputBox textarea {
+  border: 1px solid whitesmoke;
+  padding: 10px 5px;
+  background: transparent;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  outline: none;
+  resize: vertical;
+  height: 150px;
+}
+.inputBox#skills-used {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.inputBox#skills-used label {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.inputBox#skills-used input {
+  cursor: pointer;
+}
+.inputBox#skills-used p {
+  flex-basis: 100%;
+}
+form select {
+  padding: 10px 5px;
+  background: transparent;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
+  font-size: 1.3rem;
+  outline: none;
+}
+form select option {
+  cursor: pointer;
+  color: whitesmoke;
+  background: #18230f;
+  height: 110px;
+  border: 1px solid whitesmoke;
+}
+form button {
+  width: 200px;
+  align-self: flex-end;
+  padding: 15px 35px;
+  color: antiquewhite;
+  background: transparent;
+  border: 1px solid antiquewhite;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Geologica", sans-serif;
+  transition: all 0.3s;
+  cursor: pointer;
+  margin-top: 40px;
+}
+form button:hover {
+  background: rgba(240, 248, 255, 0.055);
+}
+footer {
+  color: aliceblue;
+  padding: 15px 30px;
+  background: #18230f;
+  border-top: 0.3px solid rgba(240, 248, 255, 0.212);
+}
+
+/* Styles for the screens of 1280px */
+@media screen and (max-width: 1280px) {
+  .project-details {
+    flex-direction: column;
+  }
+  .imgBox {
+    width: 80%;
+  }
+  .information {
+    width: 80%;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+/* Styles for the screens of width 1024px*/
+@media screen and (max-width: 1024px) {
+  .imgBox {
+    width: 100%;
+  }
+  .information {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header #menu-toggle,
+  nav #close-btn {
+    width: 30px;
+    display: block;
+  }
+  #menu-toggle img,
+  #close-btn img {
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 50px;
+    display: none;
+  }
+  nav.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  nav li a {
+    text-align: center;
+  }
+  nav #close-btn {
+    display: block;
+    align-self: flex-end;
+  }
+  #container {
+    left: 0;
+    width: 100%;
+  }
+  button.add-new {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    padding: 0 20px;
+    height: 60px;
+  }
+  header h2 {
+    height: 60px;
+    width: 68px;
+  }
+  #container {
+    top: 60px;
+  }
+  main {
+    padding: 15px 30px;
+  }
+  h1 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  main #list {
+    margin-top: 15px;
+  }
+  main #list li {
+    height: 25px;
+    margin-bottom: 15px;
+  }
+  main #list li a {
+    font-size: 1rem;
+    padding-bottom: 3px;
+  }
+  main #list li a:hover {
+    font-size: 1rem;
+  }
+  .project-details {
+    padding: 15px 0;
+    gap: 15px;
+  }
+  .information p {
+    margin-bottom: 10px;
+  }
+  .information .buttons {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .information .buttons button a,
+  button.add-new a {
+    padding: 7px 15px;
+    letter-spacing: 1.5px;
+  }
+  form {
+    padding-top: 15px;
+  }
+  .inputBox input {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  .inputBox textarea {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  .inputBox#skills-used {
+    gap: 10px 25px;
+  }
+  .inputBox#skills-used label {
+    padding-left: 5px;
+  }
+  form select {
+    padding: 5px;
+    font-size: 1rem;
+  }
+  form select option {
+    height: 80px;
+  }
+  form button {
+    width: 100%;
+    padding: 10px 15px;
+  }
+}

@@ -1,0 +1,27 @@
+extends ../layout 
+
+block main-content 
+    h1 Add a new skill 
+    form(method="post", action="/admin/skills/add/submit")
+        div.inputBox 
+            label(for="sname") Name of the skill
+            input(type="text", id="sname", placeholder="e.g. JavaScript", name="skill_name")
+        div.inputBox 
+            label(for="category") Category
+            select#category(name="category")
+                option(value="selectany" selected disabled) Select One
+                option(value="frontend") Front-End 
+                option(value="backend") Back-End 
+                option(value="database") Database 
+                option(value="other") Other
+        div.inputBox 
+            label(for="icon-image") Icon for the skill
+            input#icon-image(type="text", name="icon_image", placeholder="e.g. javascript_icon.png")
+        div.inputBox 
+            label(for="proficiency-level") Level of proficiency
+            select#proficiency-level(name="proficiency_level")
+                option(value="beginner") Beginner 
+                option(value="intermediate") Intermediate 
+                option(value="advanced") Advanced 
+                option(value="expert") Expert
+        button(type="submit") Add Skill

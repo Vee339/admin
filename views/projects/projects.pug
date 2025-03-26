@@ -1,0 +1,10 @@
+extends ../layout 
+
+block main-content 
+    h1 List of the projects
+    button.add-new
+        a(href="/admin/projects/add") Add New
+    ul#list 
+        each project in projects
+            li 
+                a(href=`/admin/projects/project/${project._id}`) #{project.name}

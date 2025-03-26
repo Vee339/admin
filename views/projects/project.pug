@@ -1,0 +1,18 @@
+extends ../layout 
+
+block main-content 
+    h1 #{project.name}
+    section.project-details 
+        div.imgBox 
+            img(src=`/images/${project.thumbnail}`, alt="")
+        div.information 
+            div.info 
+                p #{project.description}
+                p 
+                    a(href=`${project.url}` target="_blank") #{project.url} 
+                p Skills: #{project.skills.join(", ")}.
+            div.buttons 
+                button 
+                    a(href="/admin/projects") Back 
+                button
+                    a(href=`/admin/projects/delete/${project._id}`) Delete
