@@ -86,6 +86,12 @@ app.get("/api/projects", async (req, res) => {
   res.json(projects);
 });
 
+// api to retrieve the skills
+app.get("/api/skills", async (req, res) => {
+  const skills = await getSkills();
+  res.json(skills);
+});
+
 // get the list of skills
 app.get("/admin/skills", async (req, res) => {
   const skillsList = await getSkills();
